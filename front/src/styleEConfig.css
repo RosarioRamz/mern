@@ -1,0 +1,288 @@
+*, *:after, *:before {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  }
+  .blue {
+    background: #80d8ff;
+    color: #fff;
+  }
+  .navbar {
+    padding: 10px 10%;
+  }
+  #logo {
+    display: inline-block;
+    margin-top: 7px;
+    color: #fff;
+  }
+  #link {
+    color: #fff;
+    font-weight: bold;
+    margin: 0 10px;
+  }
+  i { margin: 0 7px; }
+  #sidebarCollapse {
+    color: #fff;
+    background: transparent;
+    outline: none;
+    margin: 0 20px;
+  }
+  #sidebarCollapse:hover {
+    color: #80d8ff;
+    background: #fff;
+    outline: none;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }#sidebar {
+      min-width: 250px;
+      max-width: 250px;
+      margin-top: 70px;
+      background: #FFFFFF;
+      color: #fff;
+      transition: all 0.3s;
+  }
+  #sidebar.active{
+      margin-left: -250px;
+  }
+  
+  #sidebar .sidebar-header{
+      padding: 20px;
+      background: #80d8ff;
+  }
+  #sidebar ul.components{
+      padding: 20px 0px;
+  }
+  
+  #sidebar ul p{
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+  }
+  
+  #sidebar ul li a{
+      padding: 10px 10px 10px 20px;
+      font-size: 1.1em;
+      display: block;
+      color: #000000;
+      font-weight: bold;
+  }
+  #sidebar ul li a:hover {
+      color: #0b86ead6;
+      background: #ebe9e9e2;
+      text-decoration: none;
+  }
+  
+  #sidebar ul li.active>a,
+  a[aria-expanded="true"] {
+      color: #dcdcdc;
+      background: #80d8ff;
+  }
+  a[data-toggle="collapse"] {
+      position: relative;
+  }
+  .dropdown-toggle::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+  }
+  
+  #content {
+      width: 100%;
+      padding: 40px;
+      min-height: 100vh;
+      transition: all 0.3s;
+      margin-top: 70px;
+  }
+  @media (max-width:800px) {
+    #sidebar {
+      margin-left: -250px;}
+    #sidebar.active{
+      margin-left: 0px;
+    }
+    #sidebarCollapse span{
+      display: none;
+    }
+    .card {
+      width:100%;
+    }
+  }
+  @media (max-width:400px) {
+    #sidebar {
+      margin-top: -20px;
+    }
+    #logo {
+      display: none;
+    }
+  }
+
+  .btn-primary {
+    background-color: #80d8ff !important;
+    border-color: rgb(255, 255, 255) !important;
+  }
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-primary:visited,
+  .btn-primary:focus {
+    background-color: #255fa1 !important;
+    border-color: rgb(215, 215, 238) !important;
+  }
+
+  .sidenav {
+    height: 50%;
+    width: 160px;
+    z-index: 1;
+    top: 50;
+    left: 50;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  #team {
+      background: #eee !important;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+      background-color: #108d6f;
+      border-color: #108d6f;
+      box-shadow: none;
+      outline: none;
+  }
+  
+  .btn-primary {
+      color: #fff;
+      background-color: #007b5e;
+      border-color: #007b5e;
+  }
+  
+  section {
+      padding: 60px 0;
+  }
+  
+  section .section-title {
+      text-align: center;
+      color: #007b5e;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+  }
+  
+  #team .card {
+      border: none;
+      background: #ffffff;
+  }
+  
+  .image-flip:hover .backside,
+  .image-flip.hover .backside {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -o-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      border-radius: .25rem;
+  }
+  
+  .image-flip:hover .frontside,
+  .image-flip.hover .frontside {
+      -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
+      -o-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+  }
+  
+  .mainflip {
+      -webkit-transition: 1s;
+      -webkit-transform-style: preserve-3d;
+      -ms-transition: 1s;
+      -moz-transition: 1s;
+      -moz-transform: perspective(1000px);
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transition: 1s;
+      transform-style: preserve-3d;
+      position: relative;
+  }
+  
+  .frontside {
+      position: relative;
+      -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      z-index: 2;
+      margin-bottom: 30px;
+  }
+  
+  .backside {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: white;
+      -webkit-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
+      -o-transform: rotateY(-180deg);
+      -ms-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+      box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  }
+  
+  .frontside,
+  .backside {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: 1s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transition: 1s;
+      -moz-transform-style: preserve-3d;
+      -o-transition: 1s;
+      -o-transform-style: preserve-3d;
+      -ms-transition: 1s;
+      -ms-transform-style: preserve-3d;
+      transition: 1s;
+      transform-style: preserve-3d;
+  }
+  
+  .frontside .card,
+  .backside .card {
+      min-height: 312px;
+  }
+  
+  .backside .card a {
+      font-size: 18px;
+      color: #007b5e !important;
+  }
+  
+  .frontside .card .card-title,
+  .backside .card .card-title {
+      color: #007b5e !important;
+  }
+  
+  .frontside .card .card-body img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+  }
