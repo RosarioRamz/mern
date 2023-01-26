@@ -25,6 +25,7 @@ function App() {
           <Route exact path='pacientes' element={<Pacientes/>}/>
           <Route exact path='administracion' element={<Administracion/>}/>
           <Route exact path='pacienteInfo' element={<PacienteInfo/>}/>
+          <Route exact path='listar' element={<Listar/>}/>
         </Routes>
         </Router>
 

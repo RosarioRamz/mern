@@ -9,6 +9,7 @@ function Agregar() {
     const[matricula,setMatricula] =useState("")
     const[estado,setEstado] =useState("")
     const[pacientes,setPacientes] =useState(0)
+    
 
     useEffect(()=>{
         console.log("agregar --")
@@ -52,3 +53,4 @@ function Agregar() {
     )
 }
 export default Agregar
+

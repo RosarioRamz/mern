@@ -286,3 +286,16 @@
       height: 120px;
       border-radius: 50%;
   }
+
+  .circular--portrait {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .circular--portrait img {
+    width: 100%;
+    height: auto;
+  }
