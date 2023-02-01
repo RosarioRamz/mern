@@ -4,7 +4,10 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams} from 'react-router-dom'
 import NavBar from './NavBar'
 
+console.log("editando")
+
 function Editar() {
+    console.log("edirtg5rghtando")
     const navigate = useNavigate()
     const[matricula,setMatricula] = useState("")
     const[nombre,setNombre] = useState("")
@@ -12,7 +15,7 @@ function Editar() {
     const[pacientes,setPacientes] = useState("")
     const {id} = useParams();
     useEffect(()=>{
-        console.log("editando")
+        console.log("edtghrthtyitando")
         obtenerUsuarioPorId()
     },[])
 
@@ -32,7 +35,7 @@ function Editar() {
                 estado,
                 pacientes
             })
-            navigate ("/listar")
+            navigate ("/inicio")
         } catch (error) {
             console.log(error)
         }

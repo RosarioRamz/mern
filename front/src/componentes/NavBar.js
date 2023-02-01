@@ -29,7 +29,7 @@ function NavBar() {
                         <a class="nav-link" href="#"><h6><FaRegFileAlt />Reportes</h6></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><h6><FaSignOutAlt />Salir</h6></a>
+                        <a class="nav-link" onClick={()=>navigate('/')}><h6><FaSignOutAlt />Salir</h6></a>
                     </li>
                 </ul>
                

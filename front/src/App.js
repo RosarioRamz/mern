@@ -13,6 +13,7 @@ import Administracion from './componentes/Administracion';
 import PacienteInfo from './componentes/PacienteInfo';
 import AgregarPaciente from './componentes/AgregarPaciente';
 import EditarPaciente from './componentes/EditarPaciente';
+import Agregarcopy from './componentes/Agregarcopy';
 
 function App() {
 
@@ -23,13 +24,14 @@ function App() {
           <Route exact path="/" element={<Login/>} />
           <Route exact path='inicio' element={<Inicio/>}/>
           <Route exact path='agregar' element={<Agregar/>}/>
-          <Route exact path='editar' element={<Editar/>}/>
+          <Route exact path='editar/:id' element={<Editar/>}/>
           <Route exact path='pacientes' element={<Pacientes/>}/>
           <Route exact path='administracion' element={<Administracion/>}/>
           <Route exact path='pacienteInfo' element={<PacienteInfo/>}/>
           <Route exact path='listar' element={<Listar/>}/>
           <Route exact path='agregarPaciente' element={<AgregarPaciente/>}/>
           <Route exact path='editarPaciente/:id' element={<EditarPaciente/>}/>
+          <Route exact path='agregarcopy' element={<Agregarcopy/>}/>
 
         </Routes>
         </Router>
