@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const PacienteSchema = new Schema({
-    tipo: String,
-    nombreP: String,
+    Tipo: String,
+    NombreP: String,
     ApellidosP: String,
     INE: String,
-    Convenio: String,
+    Correo: String,
     NumeroCasa: Number,
     Sexo: String,
     DiaNacimiento: Number,
@@ -13,8 +13,8 @@ const PacienteSchema = new Schema({
     AnioNacimiento: Number,
     Ciudad: String,
     Colonia: String,
-    Dirección: String,
+    Direccion: String,
     Telefono: Number,
-    Profesión: String
+    Profesion: String
 })
 module.exports=mongoose.model('paciente',PacienteSchema)

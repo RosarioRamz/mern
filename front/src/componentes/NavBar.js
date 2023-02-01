@@ -10,9 +10,6 @@ function NavBar() {
 
     return (
         <nav class="navbar navbar-expand-lg navbar-light blue ">
-            <button id="sidebarCollapse" class="btn navbar-btn">
-                <i class="fas fa-lg fa-bars"></i>
-            </button>
             <a class="navbar-brand">
                 <h3 id="logo">CEODON</h3>
             </a>

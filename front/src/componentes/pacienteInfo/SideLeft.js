@@ -16,12 +16,12 @@ function SideLeft() {
                 </a>
                 <div class="circular--portrait mx-auto d-block">
 
-                <img src="usuario.jpg"></img>
+                <img src="/usuario.jpg"></img>
                 </div>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
                         <a href="#" class="nav-link align-left px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Rosario Ramírez</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">______________</span>
                         </a>
                     </li>
                     <li>

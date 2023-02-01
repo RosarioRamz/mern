@@ -11,6 +11,8 @@ import Home from './componentes/Home';
 import Pacientes from './componentes/Pacientes';
 import Administracion from './componentes/Administracion';
 import PacienteInfo from './componentes/PacienteInfo';
+import AgregarPaciente from './componentes/AgregarPaciente';
+import EditarPaciente from './componentes/EditarPaciente';
 
 function App() {
 
@@ -26,6 +28,9 @@ function App() {
           <Route exact path='administracion' element={<Administracion/>}/>
           <Route exact path='pacienteInfo' element={<PacienteInfo/>}/>
           <Route exact path='listar' element={<Listar/>}/>
+          <Route exact path='agregarPaciente' element={<AgregarPaciente/>}/>
+          <Route exact path='editarPaciente/:id' element={<EditarPaciente/>}/>
+
         </Routes>
         </Router>
 

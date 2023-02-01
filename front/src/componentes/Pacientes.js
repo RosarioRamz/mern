@@ -1,33 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import NavBar from './NavBar'
 import { FaPencilAlt } from 'react-icons/fa'
+import { FaTrashAlt } from 'react-icons/fa'
 
-function Listar() {
+import axios from 'axios'
+
+
+function Pacientes() {
+  const navigate = useNavigate()
+  const [paciente, setPacientes] = useState([])
+
+
+
   useEffect(() => {
     getPaciente()
 
   }, [])
-  const [pacientes, setPacientes] = useState([])
+
   const getPaciente = async () => {
-    const response = await axios.get("http://localhost:3002/pacienteobtenerRegistros")
+    console.log("ya llegué pacientes88")
+    const response = await axios.get("http://localhost:3002/paciente/obtenerRegistros")
     setPacientes(response.data)
   }
   const eliminarPaciente = async (id) => {
     try {
       console.log('Hola lleghue pacientes')
-      await axios.get(`http://localhost:3002/pacienteeliminarRegistro/${id}`)
+      await axios.get(`http://localhost:3002/paciente/eliminarRegistro/${id}`)
       getPaciente()
     } catch (error) {
       console.log(error)
     }
   }
 
-}
-function Pacientes() {
-  const navigate = useNavigate()
-  console.log("ya llegué pacientes")
   return (
     <div>
       <NavBar />
@@ -35,28 +41,42 @@ function Pacientes() {
       <div className='container grid'>
         <h1>Listar</h1>
 
-        <table class="table table-success table-striped">
+        <div class="row">
+                      <div class="form-group col-md-8"></div>
+                      <div class="form-group col-md-4">
+                        <div class="d-grid gap-2 text-right">
+                       <button className="btn btn-primary " aria-current="page" onClick={()=>navigate('/agregar')} >Agregar paciente</button>
+                        </div>
+                      </div>
+                      </div>
+                      <br></br>
+
+        <table class="table table-primary table-striped">
           <thead>
             <tr>
-              <th scope="col">Matrícula</th>
+              <th scope="col">CURP</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Estado</th>
-              <th scope="col">Pacientes</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Telefono</th>
+              <th scope="col">Tipo de sangre</th>
               <th scope="col">Eliminar</th>
               <th scope="col">Editar</th>
             </tr>
           </thead>
           <tbody>
-            {usuarios.map((usuario, i) => (
-              <tr key={usuario.id}>
-                <td>{usuario.matricula}</td>
-                <td>{usuario.nombre}</td>
-                <td>{usuario.estado}</td>
-                <td>{usuario.pacientes}</td>
-                <td><button onClick={() => eliminarUsuario(usuario._id)}>D</button></td>
+            {paciente.map((paciente, i) => (
+              <tr key={paciente.id}>
+                <td>{paciente.INE}</td>
+                <td>{paciente.NombreP}</td>
+                <td>{paciente.ApellidosP}</td>
+                <td>{paciente.Correo}</td>
+                <td>{paciente.Telefono}</td>
+                <td>{paciente.Tipo}</td>
+                <td><button onClick={() => eliminarPaciente(paciente._id)}><h6><FaTrashAlt /></h6></button></td>
                 <td>
-                  <Link to={`../editar/${usuario._id}`}
-                    className="button is-info is-small">E
+                  <Link to={`../editarPaciente/${paciente._id}`}
+                    className="button is-info is-small"><h6><FaPencilAlt /></h6>
                   </Link>
                 </td>
               </tr>
