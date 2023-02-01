@@ -24,7 +24,7 @@ function Agregar() {
                 estado,
                 pacientes
             })
-            navigate("/listar")
+            navigate("/inicio")
         }catch(error){
             console.log(error)
         }
